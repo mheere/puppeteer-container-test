@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    td:first-of-type {
+      width: 200px;
+    }
+    td {
+      padding: 5px 10px 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment Signoff</h1>
+  
+  <table style="width:100%">
+    <!-- <tr>
+      <th></th>
+      <th>Person 2</th>
+      <th>Person 3</th>
+    </tr> -->
+    <tr>
+      <td>Assignment ID</td>
+      <td>{{assignmentID}}</td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td>{{title}}</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>{{location}}</td>
+    </tr>
+    <tr>
+      <td>Engineer Name</td>
+      <td>{{engineerName}}</td>
+    </tr>
+    <tr>
+      <td>Agreed Start Date/Time</td>
+      <td>{{displaySignoffStart}}</td>
+    </tr>
+    <tr>
+      <td>Agreed End Date/Time</td>
+      <td>{{displaySignoffEnd}}</td>
+    </tr>
+    <tr>
+      <td>Customer Name</td>
+      <td>{{signOffCustomerSignatureName}}</td>
+    </tr>
+    <tr>
+      <td>Customer Comments</td>
+      <td>{{signOffCustomerComment}}</td>
+    </tr>
+    <tr>
+      <td>Customer Signature</td>
+      <td>{{signOffCustomerSignature}}</td>
+    </tr>
+    <tr>
+      <td>Engineer Name</td>
+      <td>{{signOffEngineerSignatureName}}</td>
+    </tr>
+    <tr>
+      <td>Engineer Comments</td>
+      <td>{{signOffEngineerComment}}</td>
+    </tr>
+    <tr>
+      <td>Engineer Signature</td>
+      <td>{{signOffEngineerSignature}}</td>
+    </tr>
+    <tr>
+      <td>Tasks</td>
+      <td>{{tasks}}</td>
+    </tr>
+
+  </table>
+
+</body>
+</html>

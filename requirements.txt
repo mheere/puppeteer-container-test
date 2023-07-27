@@ -1,0 +1,27 @@
+Signoff Date Time
+
+Assignment Title
+
+Assignment ID
+
+Assignment Location
+
+Engineer Name
+
+Assignment Start Time
+
+Assignment End Time
+
+Tasks
+
+Engineer Comments
+
+Customer Comments
+
+Customer Contact Name
+
+Customer Signature
+
+Engineer signature
+
+Image files  uploaded by the engineer

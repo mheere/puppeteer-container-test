@@ -1,0 +1,20 @@
+{
+  "name": "pdf-container-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server ./index.html",
+    "dev2": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^2.0.22",
+    "puppeteer": "^20.7.3"
+  }
+}
