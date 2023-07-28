@@ -17,8 +17,9 @@ app.get('/screenshot', async (req, res) => {
 
   try {
 
-    console.log(`--> executablePath: '/opt/google/chrome/google-chrome'`);
-    // console.log(`--> executablePath: 'google-chrome-stable'`);
+    // console.log(`--> executablePath: '/opt/google/chrome/google-chrome'`);
+    console.log(`--> executablePath: 'google-chrome-stable'`);
+    // console.log(`--> executablePath: 'no path !!! :)`);
 
     // const browser = await puppeteer.launch({
     //   headless: 'new',
@@ -39,10 +40,17 @@ app.get('/screenshot', async (req, res) => {
     //   ]
     // });
 
+    // const browser = await puppeteer.launch({
+    //   headless: 'new',
+    //   args: ["--no-sandbox"],
+    // });
+
     const browser = await puppeteer.launch({
       headless: 'new',
       executablePath: 'google-chrome-stable',
-      args: ['--enable-gpu'],
+        args: [
+          "--no-sandbox",
+      ]
     });
 
     console.log('NewPage');
@@ -52,6 +60,7 @@ app.get('/screenshot', async (req, res) => {
     await page.goto('https://www.google.com');
 
     console.log('page.screenshot');
+
     const imageBuffer = await page.screenshot();
     await browser.close();
 
