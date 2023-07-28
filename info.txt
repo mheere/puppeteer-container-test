@@ -1,3 +1,6 @@
 docker build --platform linux/amd64 -t headless-chrome .
 docker run -p 3000:3000 -it headless-chrome /bin/bash
 docker run -d --rm -p 3000:3000 headless-chrome 
+docker run -p 3000:3000 headless-chrome 
+
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - 

@@ -3,22 +3,46 @@ const puppeteer = require('puppeteer');
 
 const app = express();
 
-app.get('/screenshot', async (req, res) => {
-    console.log('Taking screenshot');
-    console.log(`executablePath: 'google-chrome-stable',`);
+app.get('/ping', async (req, res) => {
+    console.log('pong');
+});
 
-    // executablePath: 'google-chrome-stable',
-    // executablePath: '/usr/bin/google-chrome',
-    //headless: 'new',
+app.get('/screenshot', async (req, res) => {
+  console.log('Taking screenshot');
+  
+  // executablePath: 'google-chrome-stable',
+  // executablePath: '/usr/bin/google-chrome',
+  //headless: 'new',
+  // executablePath: '/usr/bin/google-chrome',
+
+  try {
+
+    console.log(`--> executablePath: '/opt/google/chrome/google-chrome'`);
+    // console.log(`--> executablePath: 'google-chrome-stable'`);
+
+    // const browser = await puppeteer.launch({
+    //   headless: 'new',
+    //   executablePath: '/opt/google/chrome/google-chrome',
+    //   dumpio: true,
+    //   args: [
+    //       "--no-sandbox",
+    //       "--disable-gpu",
+    //   ]
+    // });
+
+    // const browser = await puppeteer.launch({
+    //   headless: 'new',
+    //   executablePath: '/opt/google/chrome/google-chrome',
+    //   args: [
+    //       "--no-sandbox",
+    //       "--disable-gpu",
+    //   ]
+    // });
 
     const browser = await puppeteer.launch({
       headless: 'new',
-      executablePath: '/usr/bin/google-chrome',
-      dumpio: true,
-      args: [
-          "--no-sandbox",
-          "--disable-gpu",
-      ]
+      executablePath: 'google-chrome-stable',
+      args: ['--enable-gpu'],
     });
 
     console.log('NewPage');
@@ -34,6 +58,10 @@ app.get('/screenshot', async (req, res) => {
     res.set('Content-Type', 'image/png');
     res.send(imageBuffer);
     console.log('Screenshot taken');
+  }
+  catch(err) {
+    console.error(err);
+  }
 });
 
 app.listen(3000, () => {

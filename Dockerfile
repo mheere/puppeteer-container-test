@@ -1,6 +1,7 @@
 # Filename: Dockerfile
 
-FROM node:18-slim
+FROM --platform=linux/amd64 node:18-slim
+# FROM node:18-slim
 
 # Create working directory
 WORKDIR /usr/src/app
